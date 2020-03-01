@@ -35,6 +35,9 @@ public class MultasCDMXRequest {
      * @return List<MultaVO>
      */
     public static List<MultaVO> buscarMultas(String placa) {
+        if(placa == null || placa.isEmpty() || placa.length()> 10 )
+            return null;
+
         String response = MultasCDMXRequest.post(URL_INICIO + "?" + PARAMS, placa.toUpperCase());
 
         if(response == null || response.isEmpty()){
@@ -67,27 +70,29 @@ public class MultasCDMXRequest {
     private static List<MultaVO> getMultas(List<MultaVO> multaList, String placa) {
         if(multaList != null){
             for(MultaVO multaVO : multaList){
-                if(multaVO != null && multaVO.getPagada() != null && !multaVO.getPagada()) {
-                    MultaVO tmp = MultasCDMXRequest.getDetallePagoMulta(multaVO.getFolio());
-                    if (tmp != null) {
-                        multaVO.setActualizacion(tmp.getActualizacion());
-                        multaVO.setSancion(tmp.getSancion());
-                        multaVO.setPagada(tmp.getPagada());
-                        multaVO.setFechaInfraccion(tmp.getFechaInfraccion());
-                        multaVO.setRecargo(tmp.getRecargo());
-                        multaVO.setDescuento(tmp.getDescuento());
-                        multaVO.setMonto(tmp.getMonto());
-                        multaVO.setDiasUnidadCuenta(tmp.getDiasUnidadCuenta());
-                        multaVO.setUnidadCuenta(tmp.getUnidadCuenta());
-                        multaVO.setFechaAltaInfraccion(tmp.getFechaAltaInfraccion());
-                        multaVO.setTotal(tmp.getTotal());
-                        multaVO.setFechaValida(tmp.getFechaValida());
-                        multaVO.setLineCaptura(tmp.getLineCaptura());
-                        multaVO.setImporte(tmp.getImporte());
-                        multaVO.setFolio(tmp.getFolio());
-                        multaVO.setFundamento(tmp.getFundamento());
-                        multaVO.setMotivo(tmp.getMotivo());
-                        multaVO.setPlaca(placa);
+                if(multaVO != null && multaVO.getPagada() != null) {
+                    multaVO.setPlaca(placa);
+                    if(!multaVO.getPagada()){
+                        MultaVO tmp = MultasCDMXRequest.getDetallePagoMulta(multaVO.getFolio());
+                        if (tmp != null) {
+                            multaVO.setActualizacion(tmp.getActualizacion());
+                            multaVO.setSancion(tmp.getSancion());
+                            multaVO.setPagada(tmp.getPagada());
+                            multaVO.setFechaInfraccion(tmp.getFechaInfraccion());
+                            multaVO.setRecargo(tmp.getRecargo());
+                            multaVO.setDescuento(tmp.getDescuento());
+                            multaVO.setMonto(tmp.getMonto());
+                            multaVO.setDiasUnidadCuenta(tmp.getDiasUnidadCuenta());
+                            multaVO.setUnidadCuenta(tmp.getUnidadCuenta());
+                            multaVO.setFechaAltaInfraccion(tmp.getFechaAltaInfraccion());
+                            multaVO.setTotal(tmp.getTotal());
+                            multaVO.setFechaValida(tmp.getFechaValida());
+                            multaVO.setLineaCaptura(tmp.getLineaCaptura());
+                            multaVO.setImporte(tmp.getImporte());
+                            multaVO.setFolio(tmp.getFolio());
+                            multaVO.setFundamento(tmp.getFundamento());
+                            multaVO.setMotivo(tmp.getMotivo());
+                        }
                     }
                 }
             }

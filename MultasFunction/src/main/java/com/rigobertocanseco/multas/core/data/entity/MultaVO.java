@@ -6,13 +6,13 @@ import java.util.Date;
 public class MultaVO {
     private String placa;
     private String folio;
-    private Date fechaInfraccion;
+    private String fechaInfraccion;
     private Boolean pagada;
     private String motivo;
     private String fundamento;
     private Integer sancion;
     private Float importe;
-    private String lineCaptura;
+    private String lineaCaptura;
     private Date fechaValida;
     private Date fechaAltaInfraccion;
     private Float unidadCuenta;
@@ -39,11 +39,11 @@ public class MultaVO {
         this.folio = folio;
     }
 
-    public Date getFechaInfraccion() {
+    public String getFechaInfraccion() {
         return fechaInfraccion;
     }
 
-    public void setFechaInfraccion(Date fechaInfraccion) {
+    public void setFechaInfraccion(String fechaInfraccion) {
         this.fechaInfraccion = fechaInfraccion;
     }
 
@@ -87,12 +87,12 @@ public class MultaVO {
         this.importe = importe;
     }
 
-    public String getLineCaptura() {
-        return lineCaptura;
+    public String getLineaCaptura() {
+        return lineaCaptura;
     }
 
-    public void setLineCaptura(String lineCaptura) {
-        this.lineCaptura = lineCaptura;
+    public void setLineaCaptura(String lineaCaptura) {
+        this.lineaCaptura = lineaCaptura;
     }
 
     public Date getFechaValida() {
@@ -169,25 +169,25 @@ public class MultaVO {
 
     @Override
     public String toString() {
-        return "{" +
-                "\"placa\":\"" + placa + '\"' +
-                ", \"folio\":\"" + folio + '\"' +
-                ", \"fechaInfraccion\":" + fechaInfraccion +
-                ", \"pagada\":" + pagada +
-                ", \"motivo\":\"" + motivo + '\"' +
-                ", \"fundamento\":\"" + fundamento + '\"' +
-                ", \"sancion\":" + sancion +
-                ", \"importe\":" + importe +
-                ", \"lineCaptura\":\"" + lineCaptura + '\"' +
-                ", \"fechaValida\":" + fechaValida +
-                ", \"fechaAltaInfraccion\":" + fechaAltaInfraccion +
-                ", \"unidadCuenta\":" + unidadCuenta +
-                ", \"diasUnidadCuenta\":" + diasUnidadCuenta +
-                ", \"monto\":" + monto +
-                ", \"descuento\":" + descuento +
-                ", \"actualizacion\":" + actualizacion +
-                ", \"recargo\":" + recargo +
-                ", \"total\":" + total +
+        return "MultaVO{" +
+                "placa='" + placa + '\'' +
+                ", folio='" + folio + '\'' +
+                ", fechaInfraccion='" + fechaInfraccion + '\'' +
+                ", pagada=" + pagada +
+                ", motivo='" + motivo + '\'' +
+                ", fundamento='" + fundamento + '\'' +
+                ", sancion=" + sancion +
+                ", importe=" + importe +
+                ", lineaCaptura='" + lineaCaptura + '\'' +
+                ", fechaValida=" + fechaValida +
+                ", fechaAltaInfraccion=" + fechaAltaInfraccion +
+                ", unidadCuenta=" + unidadCuenta +
+                ", diasUnidadCuenta=" + diasUnidadCuenta +
+                ", monto=" + monto +
+                ", descuento=" + descuento +
+                ", actualizacion=" + actualizacion +
+                ", recargo=" + recargo +
+                ", total=" + total +
                 '}';
     }
 }

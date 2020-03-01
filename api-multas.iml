@@ -14,9 +14,9 @@
         <entry key="template.yaml">
           <value>
             <DeploySamConfig>
-              <option name="autoExecute" value="true" />
               <option name="bucketName" value="cansecorigoberto" />
               <option name="stackName" value="MultasFunction" />
+              <option name="useContainer" value="true" />
             </DeploySamConfig>
           </value>
         </entry>

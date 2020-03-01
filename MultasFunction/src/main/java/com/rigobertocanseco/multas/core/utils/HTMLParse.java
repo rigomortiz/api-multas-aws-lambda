@@ -82,7 +82,7 @@ public class HTMLParse {
             SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
             try {
                 Date date = formatter.parse(fecha);
-                multa.setFechaInfraccion(date);
+                multa.setFechaInfraccion(fecha);
             } catch (ParseException e) {
                 e.printStackTrace();
                 return null;
@@ -141,7 +141,7 @@ public class HTMLParse {
                 Float total = strPesosToFloat(td12.get(1).text());
 
                 multaVO.setImporte(importe);
-                multaVO.setLineCaptura(linea_captura);
+                multaVO.setLineaCaptura(linea_captura);
                 multaVO.setFechaValida(fecha_valida);
                 multaVO.setFechaAltaInfraccion(fecha_alta_infraccion);
                 multaVO.setUnidadCuenta(unidad_cuenta);
