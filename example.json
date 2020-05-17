@@ -1,0 +1,54 @@
+{
+  "headers": {
+    "Content-Type": "application\/json"
+  },
+  "isBase64Encoded": false,
+  "body": [
+    {
+      "placa": "490WFU",
+      "folio": "03035832011",
+      "fechaInfraccion": "2013-04-16",
+      "pagada": true,
+      "motivo": "POR NO RESPETAR LOS LÍMITES DE VELOCIDAD ESTABLECIDOS EN VÍAS PRIMARIAS, EN CASO DE NO HABER SEÑALAMIENTO LA VELOCIDAD MÁXIMA SERÁ DE 70 KILÓMETROS POR HORA",
+      "fundamento": "Artículo: 5, Fracción: V, Parrafo: , Inciso: A",
+      "sancion": 5
+    },
+    {
+      "placa": "490WFU",
+      "folio": "09001119315",
+      "fechaInfraccion": "2016-03-06",
+      "pagada": true,
+      "motivo": "LOS CONDUCTORES DE VEHÖCULOS DEBERµN RESPETAR LOS LÖMITES DE VELOCIDAD ESTABLECIDOS EN LA SE¥ALIZACIàN VIAL. A FALTA DE SE¥ALAMIENTO RESTRICTIVO ESPECÖFICO, LOS LÖMITES DE VELOCIDAD SE ESTABLECERµN DE ACUERDO A LO SIGUIENTE: EN LOS CARRILES CENTRALES DE LAS VÖAS DE ACCESO CONTROLADO LA VELOCIDAD MµXIMA SERµ DE 80 KILàMETROS POR HORA;",
+      "fundamento": "Artículo: 9, Fracción: I, Parrafo: 1, Inciso:",
+      "sancion": 10
+    },
+    {
+      "placa": "490WFU",
+      "folio": "08002744106",
+      "fechaInfraccion": "2016-04-16",
+      "pagada": false,
+      "motivo": "PARA LAS PREFERENCIAS DE PASO EN LAS INTERSECCIONES, EL CONDUCTOR SE AJUSTARµ AL SE¥ALAMIENTO RESTRICTIVO Y A LAS SIGUIENTES REGLAS: EN LAS INTERSECCIONES REGULADAS MEDIANTE SEMµFOROS SE RESPETARµN LAS SIGUIENTES REGLAS: CUANDO LA LUZ DEL SEMµFORO EST� EN ROJO, LOS CONDUCTORES DEBEN DETENER SU VEHÖCULO EN LA LÖNEA DE ¨ALTO¨, SIN INVADIR EL CRUCE PEATONAL O EL µREA DE ESPERA PARA BICICLETAS O MOTOCICLETAS; LOS CICLISTAS Y MOTOCICLISTAS DEBERµN HACER USO DE SUS µREAS DE ESPERA CUANDO �STAS EXISTAN;",
+      "fundamento": "Artículo: 10, Fracción: VI, Parrafo: 1, Inciso: A",
+      "sancion": 10
+    },
+    {
+      "placa": "490WFU",
+      "folio": "08004932570",
+      "fechaInfraccion": "2016-07-27",
+      "pagada": true,
+      "motivo": "VEHICULO USO PARTICULAR - SE PROHÖBE A LOS CONDUCTORES DE TODO TIPO DE VEHÖCULOS: DETENER SU VEHÖCULO SOBRE UN µREA DE ESPERA PARA BICICLETAS O MOTOCICLETAS, A MENOS QUE SE TRATE DEL USUARIO PARA EL CUAL ESTµ DESTINADO;",
+      "fundamento": "Artículo: 11, Fracción: II, Parrafo: 2, Inciso:",
+      "sancion": 20
+    },
+    {
+      "placa": "490WFU",
+      "folio": "09008824113",
+      "fechaInfraccion": "2016-07-02",
+      "pagada": true,
+      "motivo": "LOS CONDUCTORES DE VEHÖCULOS DEBERµN RESPETAR LOS LÖMITES DE VELOCIDAD ESTABLECIDOS EN LA SE¥ALIZACIàN VIAL. A FALTA DE SE¥ALAMIENTO RESTRICTIVO ESPECÖFICO, LOS LÖMITES DE VELOCIDAD SE ESTABLECERµN DE ACUERDO A LO SIGUIENTE: EN LOS CARRILES CENTRALES DE LAS VÖAS DE ACCESO CONTROLADO LA VELOCIDAD MµXIMA SERµ DE 80 KILàMETROS POR HORA;",
+      "fundamento": "Artículo: 9, Fracción: I, Parrafo: 1, Inciso:",
+      "sancion": 10
+    }
+  ],
+  "statusCode": 200
+}
