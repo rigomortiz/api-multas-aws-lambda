@@ -1,6 +1,12 @@
 package com.rigobertocanseco.multas.api.aws.lambda;
 
-import com.rigobertocanseco.multas.api.aws.lambda.MultasFunction;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonStreamParser;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.junit.Test;
 
 import java.io.*;
@@ -78,12 +84,17 @@ public class MultasFunctionTest {
             InputStream inputStream = new ByteArrayInputStream(buffer.getBytes(StandardCharsets.UTF_8));
             OutputStream outputStream = new ByteArrayOutputStream(1024);
             app.handleRequest(inputStream, outputStream, null);
-            //assertEquals(result.getStatusCode(), 200);
-            //assertEquals(result.getHeaders().get("Content-Type"), "application/json");
-            //List<MultaVO> infractionList = result.getBody();
             assertNotNull(outputStream);
-            System.out.println(outputStream.toString());
+            JSONParser parser = new JSONParser();
+            JSONObject response = (JSONObject) parser.parse(outputStream.toString());
+            System.out.println(response.toString());
+            assertEquals(response.get("statusCode"), 200);
+            //assertEquals(response.getHeaders().get("Content-Type"), "application/json");
+            //List<MultaVO> infractionList = result.getBody();
+
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
             e.printStackTrace();
         }
 
